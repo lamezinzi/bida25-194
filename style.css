@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f7f6;
+    color: #333;
+}
+nav{
+    background-color: rgb(238, 224, 207);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1) ;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;5
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav li {
+     height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+nav a:hover{
+    background-color:  rgb(179, 179, 172) ;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #f8f7f6b1;
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1) ;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width:100;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 20px;
+}
+
+.column {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.column a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+
+.column img {
+  width: 75%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #d0d0d0;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.2s;
+}
+
+.column img:hover {
+  opacity: 0.60;
+  color:blueviolet;
+}
+
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    max-width: 80%;
+  }
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+
+.product-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  background: #eee;
+}
+
+.product-card .info {
+  padding: 12px 14px 14px;
+}
+
+
+
+footer{
+    background-color: #cbc4bc;
+    padding: 25px;
+    text-align: center;
+    color: #333;
+     
+}

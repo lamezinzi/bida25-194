@@ -191,7 +191,11 @@ nav li:first-child{
   line-height: 1;
 }
 
-
+.maker-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
 
 footer{
     background-color: #cbc4bc;

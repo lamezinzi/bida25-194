@@ -20,6 +20,7 @@ nav ul{
     align-items: center;
 
 }
+
 nav li {
      height: 50px;
 }
@@ -47,11 +48,18 @@ nav li:first-child{
     background-color: #f8f7f6b1;
     backdrop-filter: blur(10px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1) ;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    transition: transform 0.3s ease;
+     transform: translateX(100%);
 }
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
 .sidebar li{
     width: 100%;
 }
@@ -65,14 +73,14 @@ nav li:first-child{
     }
 }
 
-.row {
+.home-row {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 30px 20px;
 }
 
-.column {
+.home-column {
   flex: 1;
   max-width: 400px;
   text-align: center;
@@ -97,32 +105,24 @@ nav li:first-child{
 
 .column img:hover {
   opacity: 0.60;
-  color:blueviolet;
 }
 
 
 @media (max-width: 600px) {
-  .row {
+  .home-row {
     flex-direction: column;
     align-items: center;
   }
 
-  .column {
+  .home-column {
     max-width: 80%;
   }
 }
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
 
 .product-card {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
-  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -142,6 +142,53 @@ nav li:first-child{
 
 .product-card .info {
   padding: 12px 14px 14px;
+}
+.order-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #2979ff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  object-fit: contain;
+  cursor: default;
+}
+
+#lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
 }
 
 

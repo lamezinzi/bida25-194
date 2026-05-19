@@ -1,3 +1,20 @@
+const welcomeScreen = document.getElementById('welcome-screen');
+
+if (welcomeScreen) {
+  document.body.classList.add('blurred');
+
+  setTimeout(function () {
+    welcomeScreen.classList.add('fade-out');
+    document.body.classList.remove('blurred');
+
+    setTimeout(function () {
+      welcomeScreen.style.display = 'none';
+    }, 800);
+
+  }, 3000);
+}
+
+
  function showSidebar(){
     const sidebar = document.querySelector('.sidebar').classList.add('active');
     sidebar.style.display = 'flex'
@@ -44,7 +61,7 @@ revealButton.addEventListener('click', function() {
 
     if (funFact.classList.contains('show')) { 
 
-        revealButton.textContent = 'J Hide Fun Fact'; 
+        revealButton.textContent = 'Hide Fun Fact'; 
 
     } else { 
 

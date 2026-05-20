@@ -160,11 +160,14 @@ nav li:first-child{
   text-align: center;
 }
 
-.column a {
+.home-column a {
+  color: #bca27e;           
   text-decoration: none;
-  color: #1a1a1a;
 }
 
+.home-column a:hover {
+  color: #754913;           
+}
 
 .column img {
   width: 75%;

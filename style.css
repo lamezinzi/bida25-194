@@ -239,7 +239,7 @@ nav li:first-child{
 
 @media (max-width: 480px) {
   .page-banner .banner-text h1 {
-    -webkit-text-stroke: 0.5px;        
+    -webkit-text-stroke: 0px;        
     color: white;                   
     }
 }

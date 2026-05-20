@@ -237,6 +237,13 @@ nav li:first-child{
   -webkit-text-stroke: 2px #333;
 }
 
+@media (max-width: 480px) {
+  .page-banner .banner-text h1 {
+    -webkit-text-stroke: 0.5px;        
+    color: white;                   
+    }
+}
+
 .product-card {
   background: #fff;
   border: 1px solid #e0e0e0;
